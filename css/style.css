@@ -1,0 +1,119 @@
+/* Html */
+
+body{
+    background-color: #f7f7f7;
+}
+
+main{
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
+/* Header */
+
+.geonav{
+    background-image: url("../img/asia.jpg");
+    color: #ffffff;
+}
+
+.geoworld{
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.geobtn{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 19px;
+    text-decoration: none;
+    background-color: #f5f6fa;
+}
+
+.geobtn a:hover{
+    background-color: #C01516;
+}
+
+.close{
+    color: #aaa;
+}
+
+.close:hover{
+    color: #ffffff;
+}
+
+/* Modal */
+
+.modcon:hover{
+    color: #ffffff;
+}
+
+.modcon:hover{
+    background-image: url("../img/asia.jpg");
+}
+
+/* Index */
+
+.account{
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    padding: 6px;
+    font-size: 16px;
+    color: #ffffff;
+    background-image: url("../img/asia.jpg");
+}
+
+.account:hover{
+    text-decoration: none;
+    background-image: url("../img/asia.jpg");
+
+    color: #343a40;
+}
+
+.carimg{
+    margin: auto;
+    display: block;
+    width: 95%;
+    border-radius: 12px;
+}
+
+.contbtn{
+    font-size: 17px;
+    border-radius: 4px;
+    background-image: url("../img/asia.jpg");
+    width: 100px;
+    padding: 9px 12px 9px 12px;
+    color: #d6d8db;
+}
+
+.contbtn:hover{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Countries */
+.counttab{
+    color: #0b2e13;
+    border: 1px solid #d6d8db;
+    padding: 8px 10px 8px 10px;
+}
+
+.counttab:hover{
+    background-image: url("../img/asia.jpg");
+    padding: 8px 10px 8px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* TeacherLogin */
+.forgot{
+    color: #000000;
+    opacity: 0.6;
+}
+
+.forgot:hover{
+    color: #000000;
+    opacity: 1;
+}

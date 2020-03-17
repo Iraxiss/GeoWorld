@@ -1,0 +1,8 @@
+Email = teacher@geoworld.com
+Password = Teacher
+
+SQL Add Admin = 
+
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `role`, `confirm`) VALUES
+(null, 'Teacher', 'Geoworld', 'teacher@geoworld.com', 'bbb137624ee5225709cc8e177705d52dbfaf07084ec1cba814f8138b71fdc51477d61270e3d6cfdcc205ec7f1c1ebbec8695acce2ad109dd9004ccd1e3b4930b', 0, 1);
