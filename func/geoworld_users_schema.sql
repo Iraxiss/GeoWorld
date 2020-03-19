@@ -32,7 +32,7 @@ USE geoworld_users;
 --
 
 CREATE TABLE `messages` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `message` text NOT NULL,
   `date` datetime NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `messages` (
 --
 
 CREATE TABLE `queries` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) DEFAULT NULL,
   `query` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -54,7 +54,7 @@ CREATE TABLE `queries` (
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `email` text NOT NULL,
