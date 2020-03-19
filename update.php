@@ -108,4 +108,5 @@ if(isset($_SESSION['teacher'])){  $iduser = $_SESSION['teacher']; }
         </div>
     </div>
 </main>
+/* test */
 <?php require_once 'inc/footer.php'; ?>    
