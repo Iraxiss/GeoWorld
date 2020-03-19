@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mar. 17 mars 2020 à 20:04
+-- Généré le : jeu. 19 mars 2020 à 19:42
 -- Version du serveur :  10.1.37-MariaDB-0+deb9u1
 -- Version de PHP : 7.4.3
 
@@ -19,12 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `geoworld_users`
+-- Base de données : `	geoworld_users`
 --
-
 CREATE DATABASE geoworld_users;
 USE geoworld_users;
-
 -- --------------------------------------------------------
 
 --
@@ -32,31 +30,35 @@ USE geoworld_users;
 --
 
 CREATE TABLE `messages` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `message` text NOT NULL,
   `date` datetime NOT NULL,
   `isread` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `queries`
 --
 
 CREATE TABLE `queries` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) DEFAULT NULL,
-  `query` text
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `query` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 --
 -- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(50) NOT NULL,
-  `lastname` varchar(50) NOT NULL,
+  `id` int(11) NOT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
   `email` text NOT NULL,
   `password` text NOT NULL,
   `role` tinyint(1) NOT NULL,
@@ -64,24 +66,54 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Index pour les tables déchargées
+--
+
+--
 -- Index pour la table `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
+  ADD KEY `messages_ibfk_1` (`id_user`);
 
 --
 -- Index pour la table `queries`
 --
 ALTER TABLE `queries`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
+  ADD KEY `queries_ibfk_1` (`id_user`);
 
 --
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `queries`
+--
+ALTER TABLE `queries`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Contraintes pour les tables déchargées
+--
 
 --
 -- Contraintes pour la table `messages`
